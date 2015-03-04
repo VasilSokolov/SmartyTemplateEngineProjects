@@ -1,0 +1,2 @@
+# SmartyTemplateEngineProjects
+mini projects
