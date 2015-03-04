@@ -8,12 +8,12 @@
 			<td>City</td>
 			<td>Action</td>
 		</tr>
-		{section name=i loop=$user}
+		{section name=i loop=$people}
 		<tr>
-			<td>1</td>
-			<td>{$user[i].name}</td>
-			<td>{$user[i].city}</td>
-			<td><a href="view.php?del={$user[i].id}">Delete</a></td>
+			<td>{$smarty.section.i.rownum}</td>
+			<td>{$people[i].name}</td>
+			<td>{$people[i].city}</td>
+			<td><a href="edit.php?id={$people[i].id}">Update</a> | <a href="view.php?del={$people[i].id}">Delete</a></td>
 		</tr>
 		{/section}		
 	</table>

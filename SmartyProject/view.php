@@ -13,7 +13,11 @@ $result = $db->query("SELECT * FROM users");
 
 		$result->free();
 	}
-$smarty->assign('user', $row);
+	if (isset($_GET['del'])) {
+		$del=$db->query("DELETE FROM people WHERE id='".$_GET['del']."'");
+		header("location:view.php");
+	}
+$smarty->assign('people', $row);
 $smarty->display('./templates/view.tpl');
 
 ?>
