@@ -9,10 +9,10 @@
 		</tr>
 		{section name=i loop=$people}
 		<tr>
-			<td>{$people[i].id}</td>
+			<td>{$smarty.section.i.rownum}</td>
 			<td>{$people[i].name}</td>		
 			<td>{$people[i].city}</td>
-			<td><a href="">Delete</td>
+			<td><a href="view.php?del={$people[i].id}">Delete</td>
 		</tr>
 		{/section}	
 	</table>

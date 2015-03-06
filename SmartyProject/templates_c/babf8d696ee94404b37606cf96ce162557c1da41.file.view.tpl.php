@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-06 16:16:10
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-06 16:34:33
          compiled from ".\templates\view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1366854f9ba7dc7ff24-30193721%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'babf8d696ee94404b37606cf96ce162557c1da41' => 
     array (
       0 => '.\\templates\\view.tpl',
-      1 => 1425654967,
+      1 => 1425655798,
       2 => 'file',
     ),
   ),
@@ -58,13 +58,14 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['first']      = ($_smart
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['total']);
 ?>
 		<tr>
-			<td><?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['id'];?>
+			<td><?php echo $_smarty_tpl->getVariable('smarty')->value['section']['i']['rownum'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['name'];?>
 </td>		
 			<td><?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['city'];?>
 </td>
-			<td><a href="">Delete</td>
+			<td><a href="view.php?del=<?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['id'];?>
+">Delete</td>
 		</tr>
 		<?php endfor; endif; ?>	
 	</table>

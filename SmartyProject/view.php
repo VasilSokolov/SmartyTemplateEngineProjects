@@ -6,8 +6,6 @@ error_reporting(0);
 include 'configs/config.php';
 
 
-
-
 $records = array();
 
 if($results = $db->query("SELECT * FROM people")){
@@ -16,6 +14,11 @@ if($results = $db->query("SELECT * FROM people")){
 			$records[] = $row;
 		}
 	}
+}
+
+if (isset($_GET['del'])) {
+	$del= $db->query("DELETE FROM people WHERE id = '".$_GET['del']."'");
+	header("Location: view.php");
 }
 
 

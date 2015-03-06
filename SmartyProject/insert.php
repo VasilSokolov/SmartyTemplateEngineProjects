@@ -15,8 +15,8 @@ if (isset($_POST['submit'])) {
 	$insert = $db->query("INSERT INTO
 							 people(name, city)
 							 VALUES('".$_POST['name']."', '".$_POST['city']."')");	
-	header('location: insert.php');
-	echo "Add successfully";
+	header('location: view.php');
+	// echo "Add successfully";
 	}
 
 $smarty->display('./templates/insert.tpl');
