@@ -1,5 +1,4 @@
-
-{include file="header.tpl" title=hi}
+{include file="header.tpl" title=Insert}
 <form method="POST" action="insert.php">
 	<table width="550" border="1">
 		<tr>

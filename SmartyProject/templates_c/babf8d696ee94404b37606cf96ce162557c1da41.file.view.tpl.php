@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-06 16:34:33
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-06 17:04:43
          compiled from ".\templates\view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1366854f9ba7dc7ff24-30193721%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'babf8d696ee94404b37606cf96ce162557c1da41' => 
     array (
       0 => '.\\templates\\view.tpl',
-      1 => 1425655798,
+      1 => 1425657864,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54f9ba7e400437_67973274')) {function content_54f9ba7e400437_67973274($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>'hi'), 0);?>
+<?php if ($_valid && !is_callable('content_54f9ba7e400437_67973274')) {function content_54f9ba7e400437_67973274($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>'View'), 0);?>
 
 <a href="insert.php">Add Records</a>
 	<table width="550" border="1">
@@ -64,8 +64,9 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smart
 </td>		
 			<td><?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['city'];?>
 </td>
-			<td><a href="view.php?del=<?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['id'];?>
-">Delete</td>
+			<td><a href="edit.php?id=<?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['id'];?>
+">Update</a> | <a href="view.php?del=<?php echo $_smarty_tpl->tpl_vars['people']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['id'];?>
+">Delete</a></td>
 		</tr>
 		<?php endfor; endif; ?>	
 	</table>
