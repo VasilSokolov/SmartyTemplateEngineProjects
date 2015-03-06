@@ -2,20 +2,23 @@
 require ('libs/Smarty.class.php');
 $smarty = new Smarty();
 
-include 'config.php';
+error_reporting(0);
+include 'configs/config.php';
 
-print_r($_POST);
+
+
+// print_r($_POST);
+
+
 if (isset($_POST['submit'])) {
-	$name = trim($_POST['name']);
-	$city = trim($_POST['city']);
-	$sql = $db->query("INSERT INTO people(name, city) VALUES('{$name}', '{$city}'"));
 
-	header("location: view.php");
-	echo "add record sucessfully";
-	echo $db->affected_rows;
+	$insert = $db->query("INSERT INTO
+							 people(name, city)
+							 VALUES('".$_POST['name']."', '".$_POST['city']."')");	
+	header('location: insert.php');
+	echo "Add successfully";
+	}
 
-}
-// $smarty->assign('news', 'test');
 $smarty->display('./templates/insert.tpl');
 
 ?>

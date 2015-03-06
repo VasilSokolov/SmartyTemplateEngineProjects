@@ -1,6 +1,7 @@
 {config_load file="test.conf" section="setup"}
 {include file="header.tpl" title=hi}
 <form method="post" action="edit.php">
+<input type="hidden" name="id" value="{$users.id"
 	<table width="550" border="1">
 		<tr>
 			<td colspan="2" align="center"><strong>Edit Records</strong></td>

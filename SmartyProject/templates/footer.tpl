@@ -1,1 +1,2 @@
-footer.tpl
+</body>
+</html>

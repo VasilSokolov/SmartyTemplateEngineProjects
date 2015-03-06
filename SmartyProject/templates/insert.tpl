@@ -1,6 +1,6 @@
-{config_load file="test.conf" section="setup"}
+
 {include file="header.tpl" title=hi}
-<form method="post" action="insert.php">
+<form method="POST" action="insert.php">
 	<table width="550" border="1">
 		<tr>
 			<td colspan="2" align="center"><strong>Insert Records</strong></td>
